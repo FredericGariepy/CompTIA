@@ -18,14 +18,14 @@ ___
 - 802.11ax (Wi-Fi 6): 2.4 GHz and 5 GHz
 - 802.11be (Wi-Fi 7): 2.4 GHz, 5 GHz, and 6 GHz
 
-__
+___
 
 NAC (Network Access Control) __agent__ \
 is software that enforces security policies on devices trying to access a network.
 
 It checks compliance with security standards (e.g., antivirus, OS updates) before granting access. 
 
-__
+___
 
 Some NAC vendors refer to __dissolvable agents__ _as_ an _"agentless capability"_, \
 even though this is somewhat of a misnomer.
@@ -36,7 +36,7 @@ even though this is somewhat of a misnomer.
 3. provides information and status back to the NAC system,
 4. then removes itself.
 
-__
+___
 
 __TKIP__ (Temporal Key Integrity Protocol) and \
 __CCMP__ (Counter Mode with Cipher Block Chaining Message Authentication Code Protocol) \
@@ -58,7 +58,6 @@ This backdoor provides the attacker the ability to use the phone’s call functi
 enabling them to _listen in on the device’s immediate surroundings or conversations_.
 
 Furthermore, it allows the attacker to _enable call forwarding, send messages, and more._ 
-
 
 ___
 
