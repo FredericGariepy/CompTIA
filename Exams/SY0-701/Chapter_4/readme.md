@@ -123,7 +123,7 @@ ___
 
 The weaknesses of the Password Authentication Protocol (PAP) ---> No Encryption:
 
-__
+___
 
 
 What is a main benefit of using IPsec’s Tunnel mode over Transport mode?
