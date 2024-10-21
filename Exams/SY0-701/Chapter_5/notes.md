@@ -1,5 +1,11 @@
+- BYOD is Bring Your Own Device
+- CYOD is Choose Your Own Device
+- COPE is Company Owned/Personally Enabled
+- COBO is Company Owned/Business Only
+- COSU is Company Owned/Single Use
+
 ## Research/ reads:
-- Compare BYOD vs. CYOD vs. COPE vs. COBO for a mobile strategy 
+
 - https://www.techtarget.com/searchmobilecomputing/feature/BYOD-vs-COPE-Why-corporate-device-ownership-could-make-a-comeback
 - virtual desktop infrastructures (VDIs)
 - Sideloading vs OTA updates 
