@@ -6,7 +6,7 @@
 |MOA|Memorandum of Understanding or Agreement|[See: NIST def.](https://csrc.nist.gov/glossary/term/memorandum_of_understanding_or_agreement)|
 |SPF|Sender Policy Framework|email authentication protocol designed to prevent email spoofing|
 |ASLR|Address Space Layout Randomization|memory-protection process randomizing the location where system executables are loaded into memory|
-| | | |
+|MDM|Mobile Device Management|administration of mobile devices, usually implemented by use of a third-party product with management features for particular vendors of mobile devices|
 | | | |
 | | | |
 | | | |
@@ -35,10 +35,6 @@ In email cybersecurity, SPF enables the receiving mail server to check whether i
 ### Address Space Layout Randomization (ASLR).
 Address space layout randomization (ASLR) is a technique that is used to increase the difficulty of performing a buffer overflow attack that requires the attacker to know the location of an executable in memory.
 - [Six Facts about Address Space Layout Randomization on Windows](https://cloud.google.com/blog/topics/threat-intelligence/six-facts-about-address-space-layout-randomization-on-windows/)
-
-
-
-
 
 
 
