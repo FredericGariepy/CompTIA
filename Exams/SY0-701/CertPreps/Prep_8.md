@@ -8,6 +8,10 @@
 |ASLR|Address Space Layout Randomization|memory-protection process randomizing the location where system executables are loaded into memory|
 |MDM|Mobile Device Management|administration of mobile devices, usually implemented by use of a third-party product with management features for particular vendors of mobile devices|
 |ACLs|Access Control Lists|Rules that specify which users or system processes are granted access to resources, as well as what operations are allowed on given resources |
+|SFTP|Secure File Transfer Protocol |SFTP operates over the SSH protoco|
+|UBA|User Behavior Analytics|[What is user behavior analytics (UBA)?](https://www.ibm.com/topics/user-behavior-analytics)|
+|PEP|policy enforcement point|[ A system entity that requests and subsequently enforces authorization decisions.](https://csrc.nist.gov/glossary/term/policy_enforcement_point)|
+|SAML|Security Assertions Markup Language | |
 | | | |
 | | | |
 
