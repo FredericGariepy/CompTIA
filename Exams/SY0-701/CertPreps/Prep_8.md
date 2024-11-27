@@ -12,8 +12,14 @@
 |UBA|User Behavior Analytics|[What is user behavior analytics (UBA)?](https://www.ibm.com/topics/user-behavior-analytics)|
 |PEP|policy enforcement point|[ A system entity that requests and subsequently enforces authorization decisions.](https://csrc.nist.gov/glossary/term/policy_enforcement_point)|
 |SAML|Security Assertions Markup Language | |
-| | | |
-| | | |
+|IPSec|Internet Protocol Security| |
+|ESP|Encapsulating Security Payload| |
+|AH|Authentication Header  |
+|QoS|Quality of Service| |
+|PKI|Public Key Infrastructure| |
+|UTM|Unified Threat Management| |
+|ABAC|attribute-based access control| |
+|RADIUS|Remote Authentication Dial-In User Service|a networking protocol that authorizes and authenticates users who access a remote network [What Is RADIUS?](https://www.fortinet.com/resources/cyberglossary/radius-protocol)|
 
 
 ### Agentless monitoring
