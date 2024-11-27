@@ -7,7 +7,7 @@
 |SPF|Sender Policy Framework|email authentication protocol designed to prevent email spoofing|
 |ASLR|Address Space Layout Randomization|memory-protection process randomizing the location where system executables are loaded into memory|
 |MDM|Mobile Device Management|administration of mobile devices, usually implemented by use of a third-party product with management features for particular vendors of mobile devices|
-| | | |
+|ACLs|Access Control Lists|Rules that specify which users or system processes are granted access to resources, as well as what operations are allowed on given resources |
 | | | |
 | | | |
 
@@ -15,7 +15,7 @@
 ### Agentless monitoring
 It monitors systems and devices using standard protocols like SNMP, WMI, NetFlow, sFlow, or packet sniffing without requiring agents to be installed on the target systems.
 
-This type of monitoring minimizes the impact on system performance and reduces maintenance overhead, as it does not require the installation and upkeep of agents on individual systems. Agentless monitoring provides sufficient oversight for a smaller environment without the complexity and resource demands associated with agent-based solutions. \
+This type of monitoring minimizes the impact on system performance and reduces maintenance overhead, as it does not require the installation and upkeep of agents on individual systems. Agentless monitoring provides sufficient oversight for a smaller environment without the complexity and resource demands associated with agent-based solutions.
 
 - [Agentless monitoring in Windows](https://learn.microsoft.com/en-us/system-center/scom/manage-agentless-monitoring?view=sc-om-2025)
 - [Agentless monitoring in PRTG](https://www.paessler.com/remote-monitoring) *PRTG supports Agent & Agent-less*
@@ -37,9 +37,37 @@ Address space layout randomization (ASLR) is a technique that is used to increas
 - [Six Facts about Address Space Layout Randomization on Windows](https://cloud.google.com/blog/topics/threat-intelligence/six-facts-about-address-space-layout-randomization-on-windows/)
 
 
+### [What Is A Transparent Proxy?](https://www.fortinet.com/resources/cyberglossary/transparent-proxy)
+Proxy servers essentially act as a middleman between you and the internet.
+- **Transparent Proxies** are useful for monitoring, filtering, and caching without requiring user interaction, often used by organizations for network management. 
+- **Non-Transparent Proxies** are used for privacy(The proxy hides your real IP addres), security, and bypassing content restrictions, where the user is aware and in control of the proxy configuration.
 
+Proxy uses:
 
+- Firefox: Menu>Settings>Network Settings>Settings>Manual proxy configuration
+- Tor Network
+- Curl 
+```bash
+curl -x http://proxy_ip:proxy_port http://example.com
+```
 
+- Python Requests / Web Scraping
+```python
+# SOCKS4: Older version, supports only TCP traffic (works for web browsing, emails, etc.).
+# SOCKS5: Newer version, supports both TCP and UDP traffic, allows for more features like authentication and better security options.
+
+import requests
+
+proxies = {
+    "http": "socks5://proxy_ip:proxy_port",
+    "https": "socks5://proxy_ip:proxy_port"
+    "http": "http://proxy_ip:proxy_port",
+    "https": "https://proxy_ip:proxy_port",
+}
+
+response = requests.get("http://example.com", proxies=proxies)
+print(response.text)
+```
 
 
 
