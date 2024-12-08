@@ -9,6 +9,61 @@
 
 ### Subnet Mask
 number that hides the network portion of an IPv4 address, leaving only the host portion of the IP address.
+In binary form, \
+1: network reserved address bits, the subnet mask. \
+IPv4 example: 11111111.11111111.11111111.00000000 = CIDR /24 : 255.255.255.000 \
+0: available adress bit(s) : in the example (above) 2^8 possible addresses, the host portion.
+
+### Subnetting
+subnetting is splitting the portion of hosts on a network class address.
+In this subnet mask example, we start with a Class 3, /24 network: \
+subnetmask = 255.255.255.000 = 11111111.11111111.11111111.00000000 = CIRD /24
+|Network Address| First Host|Last Host|Broadcast|
+|-|-|-|-|
+|192.168.40.000/24|192.168.40.1|192.168.40.126|192.168.40.127|
+
+we take 1 bit from the host portion of this /24 in order to divide the network into two subnets. \
+11111111.11111111.11111111.10000000 = CIRD /25 \
+we now have:
+
+|Subnet|Network Address| First Host|Last Host|Broadcast|
+|-|-|-|-|-|
+|Subnet 1|192.168.40.0/25|192.168.40.1|192.168.40.126|192.168.40.127|
+|Subnet 2|192.168.40.128/25|192.168.40.129|192.168.40.254|192.168.40.255|
+
+**Network Diagram**
+```
+[ 192.168.40.0/24 ]  
+   ├── 192.168.40.0/25 → Subnet 1 (126 hosts)  
+   └── 192.168.40.128/25 → Subnet 2 (126 hosts)
+```
+
+**Cisco Router**
+```
+Router> enable
+Router# configure terminal
+Router(config)# interface eth0
+Router(config-if)# ip address 192.168.40.1 255.255.255.128
+Router(config-if)# no shutdown
+Router(config-if)# exit
+Router(config)# interface eth1
+Router(config-if)# ip address 192.168.40.129 255.255.255.128
+Router(config-if)# no shutdown
+Router(config-if)# exit
+Router(config)# exit
+Router# show running-config  <-- this comands will show the configs with Ethernet0 adn Ethernet1, the two subnets
+...
+interface Ethernet0
+ ip address 192.168.40.1 255.255.255.128
+ no shutdown
+interface Ethernet1
+ ip address 192.168.40.129 255.255.255.128
+ no shutdown
+```
+Subnets themselfs can be further subnetted.
+
+
+
 
 ### IPv4
 32-bit address space (4 octet).
