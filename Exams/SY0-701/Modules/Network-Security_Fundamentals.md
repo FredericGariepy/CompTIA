@@ -90,37 +90,60 @@ A centralized control plane means network administrators can write new rules and
 ### Wireless / Personal Area Networks (WPANs / PANs)
 Connect an individual’s electronic devices (laptops, smartphone, virtual personal assitants (Alexa, Siri, ...)) and wearables.
 
+## Fully qualified domain name (FQDN) ... Parts of URL
+| Scheme | Subdomain | Second-level domain| Top-level domain| Subdirectory |
+| - | - | - | - | - |
+|https:// | www. | spamhaus. | org | /reputation-statistics/cctlds/domains/ |
+
 ## Domain Name System (DNS)
+Transalte domain name to IP. \
+![DNS Lookup Process](https://cf-assets.www.cloudflare.com/slt3lc6tev37/1NzaAqpEFGjqTZPAS02oNv/bf7b3f305d9c35bde5c5b93a519ba6d5/what_is_a_dns_server_dns_lookup.png)
+
+### DNS Record Types (A, AAAA, CNAME, MX, PTR, SOA, NS, TXT)
++ **A (IPv4) or AAAA (IPv6)** address maps a domain or subdomain to an IP address or multiple IP addresses.
++ **Canonical Name (CNAME)** maps a domain or subdomain to another hostname.
++ **Mail Exchanger (MX)** specifies the hostname or hostnames of email servers for a domain.
+```
+C:\Users\BlueTeam>nslookup -type=MX google.com
+Non-authoritative answer:
+google.com      MX preference = 10, mail exchanger = smtp.google.com
+```
++ **Pointer (PTR)** points to a CNAME. For reverse DNS lookup. *"What's the domain of IP 8.8.8.8?"* \
+`nslookup 8.8.8.8`
++ **Start of Authority (SOA)** specifies authoritative information about a DNS zone such as primary name server, email address of the domain administrator, and domain serial number.
+```
+C:\Users\BlueTeam>nslookup -type=SOA google.com
+Non-authoritative answer:
+google.com
+        primary name server = ns1.google.com
+        responsible mail addr = dns-admin.google.com
+        serial  = 703767055
+        refresh = 900 (15 mins)
+        retry   = 900 (15 mins)
+        expire  = 1800 (30 mins)
+        default TTL = 60 (1 min)
+```
++ **Name Server (NS)** record specifies an authoritative name server for a given host. 
+```
+C:\Users\BlueTeam>nslookup -type=NS example.com
+Non-authoritative answer:
+example.com     nameserver = a.iana-servers.net
+example.com     nameserver = b.iana-servers.net
+````
++ **Text (TXT)** stores text-based information.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Side notes
+Tips on a getting a good domain
+- Stay away from hyphens in your domain
+- Stay away from numbers in your domain
+- Stay away from words that are numbers (five, ten, etc.), in your domain (I find that telling people your domain with these can complicate things; i.e., 'is that a 5 or f.i.v.e.?)
+- Stay away from any of these TLDs (these change over time - dig around this site): https://www.spamhaus.org/statistics/tlds/
+- Pick a TLD / registrar with solid WHOIS privacy capabilities
+- Pick a reputable registrar (... you'll have 1M opinions on this topic)
+- Don't buy a domain at the same place where you host your website
+- Setup auto-renew
+- Buy a domain for several years out (10yrs. +)
 
 
 
