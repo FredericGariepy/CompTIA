@@ -121,23 +121,12 @@ SSL VPN technology is the standard method of connecting remote endpoint devices 
 + **agentless SSL VPN** requires only that users launch a web browser, use HTTPS to open a VPN portal or webpage, and log in to the network with their user credentials.
 - **agent-based SSL VPN** connection creates a secure tunnel between a SSL VPN client installed on a host computer/laptop and a VPN concentrator device in an organization's network. Agent-based SSL VPNs are often used to securely connect remote users to an organization's network.
 
+## Data Loss Prevention (DLP)
+DLP solutions inspect data that is leaving, or egressing, a network, such as data that is sent via email and/or file  transfer. DLP prevents sensitive data (based on defined policies) from leaving the network.
++ A robust DLP solution can detect data patterns even if the data is encrypted.
+- Robust DLP solutions introduce a potential new vulnerability in the network because they have visibility into – and the ability to decrypt – all data on the network.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Unified Threat Management
+UTM combines multiple cybersecurity functions into one appliance. The UTM appliance sequentially executes these cybersecurity functions to examine traffic which adds to network traffic latency.
+- Many organizations have replaced UTM appliances with next-generation firewalls (NGFWs) to reduce traffic inspection latency
+- All security functions use the same processor and memory resources.
